@@ -4,6 +4,7 @@ import 'package:chat_app/widgets/chat_buble.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+// ignore: must_be_immutable
 class ChatPage extends StatelessWidget {
   static String id = 'ChatPage';
 
@@ -12,6 +13,8 @@ class ChatPage extends StatelessWidget {
   CollectionReference messages =
       FirebaseFirestore.instance.collection(kMessagesCollections);
   TextEditingController controller = TextEditingController();
+
+  ChatPage({super.key});
   @override
   Widget build(BuildContext context) {
   var email  = ModalRoute.of(context)!.settings.arguments ;

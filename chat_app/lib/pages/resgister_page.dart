@@ -9,7 +9,7 @@ import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 
 class RegisterPage extends StatefulWidget {
-  RegisterPage({Key? key}) : super(key: key);
+  const RegisterPage({Key? key}) : super(key: key);
 
   static String id = 'RegisterPage';
 
@@ -152,6 +152,7 @@ class _RegisterPageState extends State<RegisterPage> {
   }
 
   Future<void> registerUser() async {
+    // ignore: unused_local_variable
     UserCredential user = await FirebaseAuth.instance
         .createUserWithEmailAndPassword(email: email!, password: password!);
   }
