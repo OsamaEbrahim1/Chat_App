@@ -7,5 +7,5 @@ class ChatInitial extends ChatState {}
 
 class ChatSuccess extends ChatState {
   List<Message> messages;
-  ChatSuccess(this.messages);
+  ChatSuccess({required this.messages});
 }
